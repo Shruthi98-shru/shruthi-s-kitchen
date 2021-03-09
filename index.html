@@ -1,3 +1,21 @@
+<?php
+if(isset($_post['ok'])){
+    include_once 'db.php';
+    $obj= new kannadas();
+    $res=$obj->userfb($_post);
+    if($res==true){
+        echo "<script>alert('Query successfully submitted.Thank you')</script>";
+    }else{
+        echo "<script>alert('Something went wrong!!')</script>";
+    }
+}
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +43,7 @@
 <nav>
     
     <ul>
-       <li> <a href=""><span style="font-size:3rem;">ಆಹರಾ ವಿಹಾರ</span></a></li>
+       <li> <a href=""><span style="font-size:4rem;">ಆಹಾರ ವಿಹಾರ</span></a></li>
         <li><a href="#home">ಮನೆ</a></li>
         <li><a href="#special">ವಿಶೇಷ</a></li>
         <li><a href="#about">ಕುರಿತು</a></li>
@@ -53,7 +71,7 @@
     <h1>ನೀವು ನಿರಾಕರಿಸಲು ಸಾದ್ಯವಿಲ್ಲದ ಆಹಾರ</h1>
     <h2>
         ಅದ್ಭುತ ರುಚಿಯನ್ನು ಆನಂದಿಸಿ</h2>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta vel quisquam nostrum cum minima nobis consequatur alias eius omnis dolorem.</p>
+    <p>ಹಸಿದು ಉಣ್ಣುವುದು ಪ್ರಕೃತಿ, ಹಸಿಯದೇ  ಉಣ್ಣುವುದು ವಿಕೃತಿ, ಹಸಿದು ಹಸಿದವರಿಗೆ ಉಣ್ಣಿಸುವುದು ಭಾರತಿಯ ಸಂಸ್ಕೃತಿ.</p>
     <a href="#special"><button>ಪ್ರಾರಂಭಿಸಿ</button></a>
 </div>
 
@@ -82,46 +100,46 @@
 
 <div class="heading text-center">
 <h1>ನಮ್ಮ  <span>ವಿಶೇಷ</span></h1>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, atque.</p>
+<p></p>
 </div>
 
 
 <div class="card-container">
 
     <div class="card">
-        <img src="images/spl1.jpg" alt="">
+        <img src="../images/spl1.jpg" alt="">
         <p>ಬೂಂದಿ ಸಲಾಡ್</p>
-        <a href="#"><button onclick="window.location.href='spl1.html'">ಮತ್ತಷ್ಟು ಓದು</button></a>
+        <a href="#"><button onclick="window.location.href='special-dishes/special1.html'">ಮತ್ತಷ್ಟು ಓದು</button></a>
     </div>
 
     <div class="card">
-        <img src="images/spl2.jpg" alt="">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque eum nam, officia porro dicta molestiae! Veniam, nemo aliquid. Repellat, iste.</p>
-        <a href="#"><button onclick="window.location.href='spl2.html'">ಮತ್ತಷ್ಟು ಓದು</button></a>
+        <img src="../images/spl2.jpg" alt="">
+        <p>ಮೊಳಕೆ ಕಾಳಿನ ಸಲಾಡ್ ರೆಸಿಪಿ </p>
+        <a href="#"><button onclick="window.location.href='special-dishes/special2.html'">ಮತ್ತಷ್ಟು ಓದು</button></a>
     </div>
 
     <div class="card">
-        <img src="images/spl3.jpg" alt="">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque eum nam, officia porro dicta molestiae! Veniam, nemo aliquid. Repellat, iste.</p>
-        <a href="#"><button onclick="window.location.href='spl3.html'">ಮತ್ತಷ್ಟು ಓದು</button></a>
+        <img src="../images/spl3.jpg" alt="">
+        <p>ಬ್ರೆಡ್ ಮಂಚೂರಿಯನ್ ರೆಸಿಪಿ</p>
+        <a href="#"><button onclick="window.location.href='special-dishes/special3.html'">ಮತ್ತಷ್ಟು ಓದು</button></a>
     </div>
 
     <div class="card">
-        <img src="images/spl.jpg" alt="">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque eum nam, officia porro dicta molestiae! Veniam, nemo aliquid. Repellat, iste.</p>
-        <a href="#"><button onclick="window.location.href='spl4.html'">ಮತ್ತಷ್ಟು ಓದು</button></a>
+        <img src="../images/spl4.jpg" alt="">
+        <p>ಫ್ರೂಟ್ ಕಾಕ್ಟೈಲ್ ರೆಸಿಪಿ | ಫ್ರೂಟ್ ಸಲಾಡ್</p>
+        <a href="#"><button onclick="window.location.href='special-dishes/special4.html'">ಮತ್ತಷ್ಟು ಓದು</button></a>
     </div>
 
     <div class="card">
-        <img src="images/card3.jpg" alt="">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque eum nam, officia porro dicta molestiae! Veniam, nemo aliquid. Repellat, iste.</p>
-        <a href="#"><button onclick="window.location.href='spl5.html'">ಮತ್ತಷ್ಟು ಓದು</button></a>
+        <img src="../images/spl5.jpg" alt="">
+        <p>ಮಾವಿನಹಣ್ಣಿನ ಲಸ್ಸಿ ರೆಸಿಪಿ </p>
+        <a href="#"><button onclick="window.location.href='special-dishes/special5.html'">ಮತ್ತಷ್ಟು ಓದು</button></a>
     </div>
 
     <div class="card">
-        <img src="images/card3.jpg" alt="">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque eum nam, officia porro dicta molestiae! Veniam, nemo aliquid. Repellat, iste.</p>
-        <a href="#"><button onclick="window.location.href='spl6.html'">ಮತ್ತಷ್ಟು ಓದು</button></a>
+        <img src="../images/spl6.jpg" alt="">
+        <p>ಕಸ್ಟರ್ಡ್ ರೆಸಿಪಿ | ಫ್ರೂಟ್ ಸಲಾಡ್ ಕಸ್ಟರ್ಡ್</p>
+        <a href="#"><button onclick="window.location.href='special-dishes/special6.html'">ಮತ್ತಷ್ಟು ಓದು</button></a>
     </div>
 
 </div>
@@ -144,7 +162,7 @@
             <p>ಕನ್ನಡದ ಕಿಚನ್ ಭಾರತೀಯ ಸಸ್ಯಾಹಾರಿ ಪಾಕವಿಧಾನಗಳ ಬಗ್ಗೆ. ನಮ್ಮ ಅಡುಗೆಮನೆಯಿಂದ ನೇರವಾಗಿ ನಾವು ನಿಮಗೆ ಸಣ್ಣ ವಿಧಾನಗಳನ್ನು ಮತ್ತು ಹಂತ ಹಂತದ ಪಾಕವಿಧಾನಗಳನ್ನು ಒದಗಿಸುತ್ತೇವೆ. ಆಸಕ್ತಿದಾಯಕ ಪಾಕವಿಧಾನಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ನಮ್ಮೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ.
             </p>
             
-            <a href="#"><button>ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</button></a>
+            <!--<a href="#"><button>ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</button></a> -->
         </div>
 
         <div class="col-md-6 image">
@@ -174,7 +192,7 @@
             <div class="info">
                 <h3>ತಿ೦ಡಿ1</h3>
                 <p>ಊದಲು ಅಕ್ಕಿಯ ಪುಲಾವ್ ರೆಸಿಪಿ </p>
-                <a href="#"><button onclick="window.location.href='dish1.html'">ವೀಕ್ಷಣ</button></a>
+                <a href="#"><button onclick="window.location.href='dishes/dish1.html'">ವೀಕ್ಷಣ</button></a>
             </div>
         </div>
 
@@ -183,7 +201,7 @@
             <div class="info">
                 <h3>ತಿ೦ಡಿ2</h3>
                 <p>ತರಕಾರಿ ಪುಲಾವ್ ರೆಸಿಪಿ </p>
-                <a href="#"><button onclick="window.location.href='dish2.html'">ವೀಕ್ಷಣ</button></a>
+                <a href="#"><button onclick="window.location.href='dishes/dish2.html'">ವೀಕ್ಷಣ</button></a>
             </div>
         </div>
 
@@ -192,7 +210,7 @@
             <div class="info">
                 <h3>ತಿ೦ಡಿ3</h3>
                 <p>ಶಾವಿಗೆ ಬಿರಿಯಾನಿ ರೆಸಿಪಿ </p>
-                <a href="#"><button onclick="window.location.href='dish3.html'">ವೀಕ್ಷಣ</button></a>
+                <a href="#"><button onclick="window.location.href='dishes/dish3.html'">ವೀಕ್ಷಣ</button></a>
             </div>
         </div>
 
@@ -201,7 +219,7 @@
             <div class="info">
                 <h3>ತಿ೦ಡಿ4</h3>
                 <p>ಮೂಂಗ್ ದಾಲ್ ಇಡ್ಲಿ ರೆಸಿಪಿ </p>
-                <a href="#"><button onclick="window.location.href='dish4.html'">ವೀಕ್ಷಣ</button></a>
+                <a href="#"><button onclick="window.location.href='dishes/dish4.html'">ವೀಕ್ಷಣ</button></a>
             </div>
         </div>
 
@@ -210,7 +228,7 @@
             <div class="info">
                 <h3>ತಿ೦ಡಿ5</h3>
                 <p>ರವಾ ಮಸಾಲಾ ದೋಸೆ </p>
-                <a href="#"><button onclick="window.location.href='dish5.html'">ವೀಕ್ಷಣ</button></a>
+                <a href="#"><button onclick="window.location.href='dishes/dish5.html'">ವೀಕ್ಷಣ</button></a>
             </div>
         </div>
 
@@ -219,67 +237,67 @@
             <div class="info">
                 <h3>ತಿ೦ಡಿ6</h3>
                 <p>ದಿಢೀರ್ ಓಟ್ಸ್ ದೋಸೆ ರೆಸಿಪಿ</p>
-                <a href="#"><button onclick="window.location.href='dish6.html'">ವೀಕ್ಷಣ
+                <a href="#"><button onclick="window.location.href='dishes/dish6.html'">ವೀಕ್ಷಣ
                 </button></a>
             </div>
         </div>
 
         <div class="box">
-            <img src="images/dish6.jpg" alt="">
+            <img src="images/d7.jpg" alt="">
             <div class="info">
                 <h3>ತಿ೦ಡಿ7</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, nihil.</p>
-                <a href="#"><button onclick="window.location.href='dish7.html'">ವೀಕ್ಷಣ
+                <p>ದಾಲ್ ಖಿಚ್ಡಿ | ಮೂಂಗ್ ದಾಲ್ ಖಿಚಿಡಿ</p>
+                <a href="#"><button onclick="window.location.href='dishes/dish7.html'">ವೀಕ್ಷಣ
                 </button></a>
             </div>
         </div>
 
         <div class="box">
-            <img src="images/dish6.jpg" alt="">
+            <img src="images/d8.jpg" alt="">
             <div class="info">
                 <h3>ತಿ೦ಡಿ8</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, nihil.</p>
-                <a href="#"><button onclick="window.location.href='dish8.html'">ವೀಕ್ಷಣ
+                <p>ಸಜ್ಜೆ ರೊಟ್ಟಿ ರೆಸಿಪಿ </p>
+                <a href="#"><button onclick="window.location.href='dishes/dish8.html'">ವೀಕ್ಷಣ
                 </button></a>
             </div>
         </div>
 
         <div class="box">
-            <img src="images/dish6.jpg" alt="">
+            <img src="images/d9.jpg" alt="">
             <div class="info">
                 <h3>ತಿ೦ಡಿ9</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, nihil.</p>
-                <a href="#"><button onclick="window.location.href='dish9.html'">ವೀಕ್ಷಣ
+                <p>ತಂದೂರಿ ರೊಟ್ಟಿ ರೆಸಿಪಿ.</p>
+                <a href="#"><button onclick="window.location.href='dishes/dish9.html'">ವೀಕ್ಷಣ
                 </button></a>
             </div>
         </div>
 
         <div class="box">
-            <img src="images/dish6.jpg" alt="">
+            <img src="images/d10.jpg" alt="">
             <div class="info">
                 <h3>ತಿ೦ಡಿ10</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, nihil.</p>
-                <a href="#"><button onclick="window.location.href='dish10.html'">ವೀಕ್ಷಣ
+                <p>ಗೆಣಸಿನ ಪರಾಟ ರೆಸಿಪಿ</p>
+                <a href="#"><button onclick="window.location.href='dishes/dish10.html'">ವೀಕ್ಷಣ
                 </button></a>
             </div>
         </div>
 
         <div class="box">
-            <img src="images/dish6.jpg" alt="">
+            <img src="images/d11.jpg" alt="">
             <div class="info">
                 <h3>ತಿ೦ಡಿ11</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, nihil.</p>
-                <a href="#"><button onclick="window.location.href='dish11.html'">ವೀಕ್ಷಣ
+                <p>ಉಕ್ಕರಿಸಿದ ಅಕ್ಕಿ ರೊಟ್ಟಿ</p>
+                <a href="#"><button onclick="window.location.href='dishes/dish11.html'">ವೀಕ್ಷಣ
                 </button></a>
             </div>
         </div>
 
         <div class="box">
-            <img src="images/dish6.jpg" alt="">
+            <img src="images/d12.jpg" alt="">
             <div class="info">
                 <h3>ತಿ೦ಡಿ12</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, nihil.</p>
-                <a href="#"><button onclick="window.location.href='dish12.html'">ವೀಕ್ಷಣ
+                <p>ಕ್ಯಾರೆಟ್ ಸೂಪ್ ರೆಸಿಪಿ</p>
+                <a href="#"><button onclick="window.location.href='dishes/dish12.html'">ವೀಕ್ಷಣ
                 </button></a>
             </div>
         </div>
@@ -302,30 +320,32 @@
 
     <div class="row justify-content-center">
 
-        <form action="" class="col-md-7">
+        <form action="" method="post" class="col-md-7">
 
             <div class="inputBox">
-                <input type="text" required>
+                <input type="text" name="name" required id="t1">
                 <h3>ಪೂರ್ಣ ಹೆಸರು</h3>
             </div>
 
             <div class="inputBox">
-                <input type="email" required>
+                <input type="email" name="email" required id="t2">
                 <h3>
                     ಇ-ಮೇಲ್</h3>
             </div>
 
             <div class="inputBox">
-                <textarea required name="" id="" cols="30" rows="10"></textarea>
+                <textarea required name="message" id="t3" cols="30" rows="10"></textarea>
                 <h3>
                     ಸಂದೇಶ</h3>
             </div>
 
-            <input type="submit" value="ಕಳುಹಿಸು">
+            <input type="submit" name="ok" value="ಕಳುಹಿಸು" >
 
         </form>
+       
 
     </div>
+
 
 </section>
 
@@ -364,7 +384,7 @@
 <h2>
     ಸುದ್ದಿಪತ್ರ</h2>
 <input type="text"><br>
-<input type="submit" value="subscribe">
+<input type="submit" value="ಚಂದಾದಾರರು">
 </div>
 
 </div>
